@@ -17,8 +17,8 @@ int main(int argc, char const *argv[]) {
   Delaunay3 dt;
   std::cout << "Default construction of Delaunay3 ...\n";
 
-  auto vertices = dt.tds().vertices();
-  auto vertex = static_cast<Vertex_handle>(vertices.begin());
+  auto&& vertices = dt.tds().vertices();
+  auto&& vertex = static_cast<Vertex_handle>(vertices.begin());
 
   std::cout << std::boolalpha
             << "There is only one vertex: " << (vertices.size() == 1) << "\n";
